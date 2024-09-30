@@ -1,0 +1,29 @@
+# Praktikum Mini Project NIM Genap
+
+print('=================================================')
+print('Program Menghitung Diskon Berdasarkan Total Harga')
+print('=================================================')
+
+Nama = input('Masukkan Nama Anda : ')
+NIM = input('Masukkan NIM Anda : ')
+print('Selamat Datang Kembali', Nama)
+
+# Menghitung Total
+
+while True:
+    Harga = int(input('Masukkan Total Harga : '))
+    diskon = 25 * Harga / 100
+    Total = Harga - diskon
+
+    if Harga >= 250000:
+        print('Anda Mendapatkan Diskon dengan total harga : ')
+        print(Total)
+    elif Harga >= 1000:
+        print('Anda Tidak Mendapatkan Diskon Dengan Total Harga : ')
+        print(Harga)
+    else:
+        print('Gagal')
+
+    if input('Apakah anda ingin menghitung total harga lagi? (Y/N): ').strip().lower() != 'y':
+        print('Terima kasih Telah menggunakan program ini')
+        break
